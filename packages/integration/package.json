@@ -1,0 +1,19 @@
+{
+  "name": "x401-zetrix-integration",
+  "version": "0.1.0",
+  "description": "End-to-end integration tests for x401-zetrix-js against a mock OID4VP backend",
+  "private": true,
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "x401-zetrix-server": "workspace:*",
+    "x401-zetrix-client": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}

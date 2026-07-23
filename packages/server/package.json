@@ -1,0 +1,59 @@
+{
+  "name": "x401-zetrix-server",
+  "version": "0.2.0",
+  "description": "x401 identity-proof SDK for Zetrix — resource-server (Part A) challenge + verify (Node.js/TypeScript)",
+  "author": "MyEG Services Berhad",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://github.com/Zetrix-Chain/x401-zetrix-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zetrix-Chain/x401-zetrix-js.git",
+    "directory": "packages/server"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck:examples": "tsc --noEmit -p examples/tsconfig.json",
+    "prepublishOnly": "pnpm run build && pnpm run test:coverage"
+  },
+  "peerDependencies": {
+    "express": "^4 || ^5",
+    "fastify": "^4 || ^5"
+  },
+  "peerDependenciesMeta": {
+    "express": {
+      "optional": true
+    },
+    "fastify": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@vitest/coverage-v8": "^1.6.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}

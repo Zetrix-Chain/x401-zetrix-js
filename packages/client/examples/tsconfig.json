@@ -1,0 +1,12 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "baseUrl": ".",
+    "types": ["node"],
+    "paths": {
+      "x401-zetrix-client": ["../src/index.ts"]
+    }
+  },
+  "include": ["**/*.ts"]
+}

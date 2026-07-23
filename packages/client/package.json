@@ -1,0 +1,47 @@
+{
+  "name": "x401-zetrix-client",
+  "version": "0.2.1",
+  "description": "x401 identity-proof SDK for Zetrix — wallet/holder (Part B) respond to PROOF-REQUEST (Node.js/TypeScript)",
+  "author": "MyEG Services Berhad",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://github.com/Zetrix-Chain/x401-zetrix-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zetrix-Chain/x401-zetrix-js.git",
+    "directory": "packages/client"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck:examples": "tsc --noEmit -p examples/tsconfig.json",
+    "prepublishOnly": "pnpm run build && pnpm run test:coverage"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@vitest/coverage-v8": "^1.6.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}

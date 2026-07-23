@@ -1,0 +1,20 @@
+{
+  "name": "@x401-zetrix/example-client",
+  "version": "0.1.0",
+  "description": "Example x401 client (wallet/holder) that answers a PROOF-REQUEST",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/client.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "x401-zetrix-client": "workspace:*",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
+  }
+}
